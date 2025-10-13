@@ -1,0 +1,126 @@
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{array}
+\usepackage{hyperref}
+\input{glyphtounicode}
+
+%-----------------------------------------------------------
+% Edit these values as you see fit
+
+\setlength{\outerbordwidth}{1pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.4}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.96}  % Inner background color of title bars
+
+%-----------------------------------------------------------
+% Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{-0.5in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+\linespread{0.96} % determines line spacing (1.0 is normal, 1.3 is 1.5x, 1.6 is 2.0x, etc.)
+
+%-----------------------------------------------------------
+% Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-8pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}{\Large \textbf{#1}}\\\vspace{-8pt}\hrulefill}
+\newcommand{\ressubheading}[4]{\vspace{3pt}
+\begin{tabular*}{7.0in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingsmol}[2]{\vspace{1pt}
+\begin{tabular*}{7.0in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & \textit{#2} \\
+\end{tabular*}\vspace{-6pt}}
+\begin{document}    
+\begin{center}
+    \textbf{\LARGE \scshape Inesh Chakrabarti} \\ \vspace{1pt}
+    \small 858-925-3059 $|$ \href{mailto:inesh33@g.ucla.edu}{\underline{inesh33@g.ucla.edu}} $|$ 
+    \href{https://www.linkedin.com/in/inesh-chakrabarti-878602183}{\underline{linkedin.com/in/inesh-chakrabarti}} $|$
+    \href{https://github.com/beesfleas}{\underline{github.com/beesfleas}}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ressubheading{University of California, Los Angeles}{Los Angeles, CA}{B.S. Electrical Engineering, M.S. Electrical Engineering}{Expected Graduation -- June 2027}
+\begin{itemize}
+	\resitem{\textbf{Graduate GPA:} 4.0 / 4.0, \textbf{Undergraduate Major GPA:} 3.8 / 4.0}
+	\resitem{\textbf{Coursework:} Large Scale Data Scraping Algorithms, Convex Optimization, Deep Learning, Software Engineering, Embedded Systems, Computer Architecture, GPU Microarchitectures, Numerical Computing, Stochastic Systems, DSP,  Communications,  Speech and Image Processing, Machine Learning, Feedback Control, Signals and Systems, Probability and Statistics}
+    \resitem{\textbf{Societies:} American Nuclear Society (President), IEEE-Eta Kappa Nu (Mentorship Chair)}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ressubheadingsmol{UCLA Lin Yang Research Group}{Febuary 2025 - Present}{}
+\begin{itemize}
+  \resitem{\href{https://arxiv.org/abs/2504.14569}{\textit{NoWag: A Unified Framework for Shape Preserving Compression of Large Language Models} 
+    } Lawrence Liu, \textbf{Inesh Chakrabarti}, Yixiao Li, Mengdi Wang, Tuo Zhao, Lin F. Yang \\ Publication accepted to \textbf{COLM} and \textbf{ICLR SLLM Workshop}}
+    \resitem{Built dequantization/inference kernels in C (CUDA) for parallelization over multiple GPUs while using \textbf{48x less calibration data }and maintaining performance against SOTA VQ methods}
+   \resitem{Implemented Trellis Quantization and benchmarking in Python for NoWag, a set of shape-preserving pruning and quantization algorithms for LLMs}
+\end{itemize}
+
+\ressubheadingsmol{UCLA Complex Networks Group (Paid Student Researcher)}{February 2022 - June 2024}
+\begin{itemize}
+    \resitem{Implemented High Frequency Oscillation Detector using Variational Autoencoder for neural signals}
+    \resitem{Processed and visualized neural spike data using Python and MATLAB to demonstrate correlation between individual neural spikes and character recognition from animation}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ressubheadingsmol{Reinforcement Learning Hearts}{September 2024 - January 2025}
+\begin{itemize}
+    \resitem{Created RL agent for Hearts using \textbf{Counterfactual Regret Minimization} and \textbf{Monte Carlo Tree Search} that reaches approximate Nash Equilibrium and superhuman performance.}
+    \resitem{Enhanced the Hearts project with a Tkinter UI and collaborated in a 3-person team, providing a \textbf{real-time interface} allowing for physical gameplay simulation via computer vision.}
+\end{itemize}
+
+\ressubheadingsmol{Algorithmic Trading Bot}{March 2023 - May 2023}
+\begin{itemize}
+    \resitem{Developed and deployed ARIMAX-based trading bot utilizing time-series analysis to optimize trading strategies and participate in \textbf{live trading} against other bots and consumers.}
+    \resitem{Created portfolio optimization bot with Kernel Density Estimation, achieving a \textbf{1.4 Sharpe Ratio} and \textbf{highest profit} in competition.}
+\end{itemize}
+\ressubheadingsmol{EEG and News Classification}{January 2023 - March 2023}
+
+\begin{itemize}
+    \resitem{Developed a \textbf{pipeline} for EEG data analysis with wavelet transform pre-processing and model distillation to predict human movement using transformer, LSTM, and CNN models.}
+    \resitem{Experimented with Kmeans, HDBSCAN clustering, NMF, and KNN with Pearson Correlation
+Recommender Systems}
+    \resitem{Constructed an end to end pipeline for news classification using Natural Language Processing (RoBERTa. BOW, TFIDF, SVM, etc.) while leveraging cuML and cuDF for GPU optimization.}
+\end{itemize}
+% https://github.com/LawrenceRLiu/ACM-advanced-track
+\ressubheadingsmol{Habit-Tracking IoT Tamagotchi with Web App}{Jan 2022}
+\begin{itemize}
+\resitem{Built backend of web app with MongoDB  with login authentication logging users' schedules with an IoT device registering task completion.}
+\resitem{Programmed ESP32 to update device's expressions in real-time based on schedule adherence.}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\resitem{\textbf{Programming Languages:} C, C++, Python (NUMBA, PySpark, Matplotlib, PyTorch, Pandas, Keras, Tensorflow), Triton, SQL, x64, C\#, Java, MATLAB, R, JavaScript}
+\resitem{\textbf{Tools:} Docker, Git, LangGraph, MongoDB, LTSpice, GDB, Unix Shell, CUDA, OpenMP, Joblib, Django, NVIDIA Nsight Compute, Apache Spark, Fuzzing (AFL), CI/CD, Agile Development}
+\end{itemize}
+
+\end{document} 
